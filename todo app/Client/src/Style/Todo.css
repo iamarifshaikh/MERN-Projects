@@ -1,0 +1,50 @@
+.list{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border-radius: 4px;
+    margin-bottom: 4px;
+    margin-top: 25px;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.todo{
+    display: flex;
+    flex-direction: column;
+}
+
+.title{
+    font-size: 20px;
+}
+
+.description{
+    font-size: 15px;
+}
+.button-container{
+    margin-top: 5px;
+    margin-right: 10px;
+}
+
+.edit{
+    background-color: rgb(0, 85, 255);
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 70px;
+}
+
+.delete{
+    background-color: red;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 70px;
+    margin-left: 15px;
+}
