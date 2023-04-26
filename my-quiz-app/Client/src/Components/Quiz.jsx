@@ -13,14 +13,14 @@ const Quiz = () => {
   const { queue, trace } = useSelector(state => state.questions);
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    console.log(result);
-  })
-
   const nextQuestion = () => {
+    console.log("Here is a next question!")
     if (trace < queue.length) {
       dispatch(MoveNextQuestion());
+      
+      if (result.length <= trace) {
         dispatch(PushAnswer(check));
+      }
     }
   };
 
@@ -46,7 +46,7 @@ const Quiz = () => {
       <Questions onChecked={onChecked} />
 
       <div className='grid'>
-        <button className='btn prev' onClick={previousQuestion}>Previous</button>
+        {trace > 0 ? <button className='btn prev' onClick={previousQuestion}>Previous</button> : <div></div> }
         <button className='btn next' onClick={nextQuestion}>Next</button>
       </div>
 

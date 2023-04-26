@@ -1,14 +1,25 @@
-import React from 'react';
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import ResultTable from './ResultTable';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { resetAllAction } from '../Redux/QuestionReducer';
 import { resetResultAction } from '../Redux/ResultReducer';
 import '../Styles/Result.css';
+import { attemptNumber,earnPointsNumber, flagResult } from '../Helper/Helper';
 
 const Result = () => {
 
   const dispatch = useDispatch();
+  const { questions: { queue, answers }, result: { result, userId } } = useSelector(state => state);
+
+  useEffect(() => {
+    console.log(flag);
+  });
+
+  const totalPoints = queue.length * 10;
+  const attempts = attemptNumber(result);
+  const earnPoints = earnPointsNumber(result, answers, 10);
+  const flag = flagResult(totalPoints, earnPoints);
 
   const onRestart = () => {
     dispatch(resetAllAction());
@@ -26,23 +37,23 @@ const Result = () => {
         </div>
         <div className='flex'>
           <span>Total Quiz Point:</span>
-          <span>50</span>
+          <span>{totalPoints || 0}</span>
         </div>
         <div className='flex'>
           <span>Total Questions:</span>
-          <span>50</span>
+          <span>{ queue.length || 0 }</span>
         </div>
         <div className='flex'>
           <span>Total Attempts:</span>
-          <span>50</span>
+          <span>{ attempts || 0 }</span>
         </div>
         <div className='flex'>
           <span>Total Earn Points:</span>
-          <span>50</span>
+          <span>{ earnPoints || 0 }</span>
         </div>
         <div className='flex'>
           <span>Quiz Result:</span>
-          <span>Passed</span>
+          <span style={{color:`${flag ? "#2AFF95" : "#FF2A66"}`}} className='bold'>{flag ? "Passed" : "Failed"}</span>
         </div>
       </div>
       
