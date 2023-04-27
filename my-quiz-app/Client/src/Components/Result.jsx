@@ -6,7 +6,8 @@ import { resetAllAction } from '../Redux/QuestionReducer';
 import { resetResultAction } from '../Redux/ResultReducer';
 import '../Styles/Result.css';
 import { attemptNumber,earnPointsNumber, flagResult } from '../Helper/Helper';
-
+import { usePublishResult } from "../Hooks/SetResult"; 
+  
 const Result = () => {
 
   const dispatch = useDispatch();
@@ -21,6 +22,21 @@ const Result = () => {
   const earnPoints = earnPointsNumber(result, answers, 10);
   const flag = flagResult(totalPoints, earnPoints);
 
+  usePublishResult({
+    result,
+    username: userId,
+    attempts,
+    points: earnPoints,
+    achieved: flag ? "PASSED" : "FAILED"
+  });
+
+  console.log({
+    result,
+    username: userId,
+    attempts,
+    points: earnPoints,
+    achieved: flag ? "PASSED" : "FAILED"})
+
   const onRestart = () => {
     dispatch(resetAllAction());
     dispatch(resetResultAction());
@@ -28,12 +44,12 @@ const Result = () => {
 
   return (
     <div className='container'>
-      <h1 className='title text-light'>Quiz Application</h1>
+      <h1 className='title text-light'>Who Know Me Better?</h1>
 
       <div className='result flex-center'>
         <div className='flex'>
           <span>Username:</span>
-          <span>Arif Shaikh</span>
+          <span>{userId}</span>
         </div>
         <div className='flex'>
           <span>Total Quiz Point:</span>

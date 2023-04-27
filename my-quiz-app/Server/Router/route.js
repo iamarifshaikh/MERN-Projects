@@ -13,7 +13,7 @@ const router = Router();
  * @access public
  * @description get all the questions
  */
-router.get("/questions", getQuestions);
+router.get("/question", getQuestions);
 
 
 /**
@@ -42,7 +42,7 @@ router.delete("/question", deleteQuestions);
  * @description all existing results
  * @returns {Object} 200 - An object containing all the results in the database.
  */
-router.get("/results", getResult);
+router.get("/result", getResult);
 
 /**
  * Route to store a new result.
