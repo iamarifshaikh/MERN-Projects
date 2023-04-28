@@ -9,4 +9,3 @@ const mainReducer = combineReducers({
 })
 
 export default configureStore({ reducer: mainReducer });
-

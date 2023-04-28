@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "This API is a backend service create for quiz app",
   "type": "module",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "server":"nodemon server.js"
+    "server":"nodemon server.js",
+    "start":"node index.js"
   },
   "author": "ARIF SHAIKH",
   "license": "MIT",

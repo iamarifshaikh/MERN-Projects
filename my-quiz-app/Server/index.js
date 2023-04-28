@@ -8,7 +8,7 @@ import connect from './Configuration/connection.js'
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.use(morgan('common'))
+app.use(morgan('common'));
 app.use(cors());
 app.use(express.json());
 config();
@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
     } catch (error) {
         res.json(error);
     }
-})
+});
 
 connect().then(() => {
     try {
@@ -30,8 +30,8 @@ connect().then(() => {
             console.log(`Server is connected and running on http://localhost:${port}`);
         });
     } catch (error) {
-        console.log("Cannot connected to mongodb server")     
+        console.log("Cannot connected to mongodb server")
     }
 }).catch(error => {
     console.log("Invalid Database Connection !")
-})
+});

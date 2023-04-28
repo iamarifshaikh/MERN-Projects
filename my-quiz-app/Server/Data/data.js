@@ -1,49 +1,58 @@
 export default [
     {
         id: 1,
-        question : "Javascript is an _______ language",
+        question : "When was Arif born?",
         options : [
-            'Object-Oriented',
-            'Object-Based',
-            'Procedural',
+            'March',
+            'September',
+            'January',
         ]
     },
     {
         id: 2,
-        question : "Following methods can be used to display data in some form using Javascript",
+        question : "What is Arif's dream vacation destination?",
         options : [
-            'document.write()',
-            'console.log()',
-            'window.alert()',
+            'Grindelwald , Switzerland',
+            'Provence, France',
+            'Vienna, Austria',
         ]
     },
     {
         id: 3,
-        question : "When an operator value is NULL, the typeof returned by the unary operator is:",
+        question : "What is Arif's favorite book?",
         options : [
-            'Boolean',
-            'Undefined',
-            'Object',
+            'Life 3.0',
+            'six faces of globalization',
+            'Beautiful World Where Are You',
         ]
     },
     {
         id: 4,
-        question : "What does the toString() method return?",
+        question : "If Arif could have any superpower, what would it be?",
         options : [
-            'Return Object',
-            'Return String',
-            'Return Integer'
+            'Super Learning',
+            'Eat Anything',
+            'Mind Reading'
         ]
     },
     {
         id: 5,
-        question : "Which function is used to serialize an object into a JSON string?",
+        question : "Who is Arif's favorite singer?",
         options : [
-            'stringify()',
-            'parse()',
-            'convert()',
+            'Marshal Mathers',
+            'Vivian Fernandes',
+            'Aubrey Drake Graham',
+        ]
+    },
+    {
+        id: 6,
+        question : "What is the Arif's favourite anime?",
+        options : [
+            'High School DxD',
+            'Attack On Titan',
+            'Demon Slayer',
         ]
     }
 ];
 
-export const answers = [0, 1, 2, 1, 0]; 
+export const answers = [2, 1, 0, 2, 0, 0]; 

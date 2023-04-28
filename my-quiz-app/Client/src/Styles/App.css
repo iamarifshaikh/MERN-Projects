@@ -170,3 +170,8 @@ input[type=radio]:checked ~ .text-primary{
 .checked::before{
   background: var(--primary-color)
 }
+
+::selection{
+  background-color: #faff5a;
+  color: black;
+}
