@@ -11,7 +11,7 @@ export const earnPointsNumber = (result, answers, point) => {
 };
 
 export const flagResult = (totalPoints, earnPoints) => {
-    return (totalPoints * 60 / 100) < earnPoints;
+    return (totalPoints * 100 / 100) < earnPoints;
 };
 
 export const CheckUserExist = ({ children }) => {

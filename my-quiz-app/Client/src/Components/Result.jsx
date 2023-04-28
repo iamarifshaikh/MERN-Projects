@@ -30,13 +30,6 @@ const Result = () => {
     achieved: flag ? "PASSED" : "FAILED"
   });
 
-  console.log({
-    result,
-    username: userId,
-    attempts,
-    points: earnPoints,
-    achieved: flag ? "PASSED" : "FAILED"})
-
   const onRestart = () => {
     dispatch(resetAllAction());
     dispatch(resetResultAction());
