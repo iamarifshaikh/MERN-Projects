@@ -15,7 +15,7 @@ export const useFetchQuestion = () => {
         
         (async () => {
             try {
-                const [{ questions, answers }] = await getServerData("http://localhost:3000/question", (data) => data);
+                const [{ questions, answers }] = await getServerData("https://whoknowmebetter.onrender.com/question", (data) => data);
 
                 if (questions.length > 0) {
                     setGetData(prev => ({ ...prev, Loading: false }));

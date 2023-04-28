@@ -22,7 +22,7 @@ export const usePublishResult = (resultData) => {
     (async () => {
         try {
             if (result !== [] && !username) throw new Error("Could not get any result");
-            await postServerData("http://localhost:3000/result", resultData, data => data);
+            await postServerData("https://whoknowmebetter.onrender.com/result", resultData, data => data);
         } catch (error) {
             console.log(error);
         }

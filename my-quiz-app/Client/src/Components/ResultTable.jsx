@@ -6,7 +6,7 @@ const ResultTable = () => {
     const [data, setData] = useState([]);
     
     useEffect(() => {
-        getServerData("http://localhost:3000/result", (res) => {
+        getServerData("https://whoknowmebetter.onrender.com/result", (res) => {
             setData(res);
         })
     },[]);
