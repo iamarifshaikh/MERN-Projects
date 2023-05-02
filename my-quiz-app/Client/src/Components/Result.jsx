@@ -27,7 +27,7 @@ const Result = () => {
     username: userId,
     attempts,
     points: earnPoints,
-    achieved: flag ? "PASSED" : "FAILED"
+    achieved: flag ? "Passed" : "Failed"
   });
 
   const onRestart = () => {
@@ -60,10 +60,10 @@ const Result = () => {
           <span>Total Earn Points:</span>
           <span>{ earnPoints || 0 }</span>
         </div>
-        <div className='flex'>
+        {/* <div className='flex'>
           <span>Quiz Result:</span>
           <span style={{color:`${flag ? "#2AFF95" : "#FF2A66"}`}} className='bold'>{flag ? "Passed" : "Failed"}</span>
-        </div>
+        </div> */}
       </div>
       
       <div className="start">

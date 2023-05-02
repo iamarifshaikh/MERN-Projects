@@ -19,7 +19,7 @@ const ResultTable = () => {
                       <td>Name</td>
                       <td>Attempts</td>
                       <td>Earn Points</td>
-                      <td>Result</td>
+                      {/* <td>Result</td> */}
                   </tr>
               </thead>
               <tbody>
@@ -30,7 +30,7 @@ const ResultTable = () => {
                           <td>{element?.username || "" }</td>
                           <td>{element?.attempts || 0 }</td>
                           <td>{element?.points || 0 }</td>
-                          <td>{element?.achieved || ""}</td>
+                          {/* <td>{element?.achieved || ""}</td> */}
                       </tr>
                     ))
                   }
